@@ -117,8 +117,6 @@ section.planetThumbs .jupiter {
 
 // // END PLANET THUMBNAILS ------------------------------------------------
 
-
-
 // MODAL BOXES  ------------------------------------------------
 // the modal boxes holds all the modal box html data that we reveal depending on which planet thumbnail image is clicked
 
@@ -131,11 +129,20 @@ section.modalBoxes {
 	left:0;
 
 	// set z-index so that it is above the planets (thumbnails) in the background
-	z-index: 10;
+	// increase z-index when it is made visible?
+	z-index: -10;
+
+	// OR
+	
+	// DEFAULT DISPLAY STATE
+	// this must come after flexbox
+	display:none;
 
 	//flexbox to make all of the modal entries centred...
 	//this section will need a set height for vertical alignment??
 	@include flexboxColumn1;
+
+	background: $spaceShade1;
 }
 
 // for design testing purposes make all other modalBox sections disappear while we stile the first one
@@ -152,6 +159,11 @@ section.modalBoxes section.modal {
 	justify-content: space-between;
 	align-content: space-between;
 	align-items: flex-start; // we want the tops to align
+
+
+	// DEFAULT DISPLAY STATE
+	// this must come after flexbox
+	display:none;
 
 	// set the section.modal "entry" to position relative so we can align the close button
 	position: relative;
