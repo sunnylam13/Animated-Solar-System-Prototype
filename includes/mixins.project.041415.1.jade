@@ -11,14 +11,19 @@
 
 //- PLANET THUMBNAILS  ------------------------------------------------
 
-mixin planetThumbnail1(className)
+mixin planetThumbnail1(className,dataType)
 	if block
 		block
 	else
 		section(class=className)
 			.frame
 				.image
-					img(src="http://lorempixel.com/200/200", alt="Image Placeholder")
+					//- img(src="http://lorempixel.com/200/200", alt="Image Placeholder",class=className)
+					if dataType
+						//- where data-planetImg is used for storing the url of the large image should we decide to use it for jQuery
+						img(src="http://lorempixel.com/200/200", alt="Image Placeholder",class=className,data-planetImg=dataType)
+					else
+						img(src="http://lorempixel.com/200/200", alt="Image Placeholder",class=className)
 
 //- END PLANET THUMBNAILS ------------------------------------------------
 
@@ -31,11 +36,12 @@ mixin modalBox1(className,heading)
 		section(class=className)
 			.frame
 				.image
-					img(src="http://lorempixel.com/200/200", alt="Image Placeholder")
+					img(src="http://lorempixel.com/700/700", alt="Image Placeholder",class=className)
 			.text
 				h2=heading
 				h3 Lorem ipsum dolor sit amet
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi modi, velit ratione odio ab suscipit.
+			span.fa.fa-close
 
 //- END MODAL BOXES ------------------------------------------------
 

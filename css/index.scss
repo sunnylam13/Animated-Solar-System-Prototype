@@ -1,0 +1,214 @@
+////////////////////////////////////////////
+///// 		INDEX.HTML
+///////////////////////////////////////////////
+// scss file for index.html
+
+// SOLAR SYSTEM  ------------------------------------------------
+
+section.solarSystem {
+	// shall we position everything relative to the solar system section?
+	position: relative;
+
+	// we want it to spread to the full width of the page and have a height equal to the view port
+	width: 100%;
+	height: 100vh;
+
+	// it shall have a black background
+	background: black;
+
+	// border: 5px solid black;
+}
+
+// // END SOLAR SYSTEM ------------------------------------------------
+
+
+
+// PLANET THUMBNAILS  ------------------------------------------------
+// the planet thumbnails are the tiny planet images that the user first sees upon page load up... they click those images and the correct modal pops up
+
+section.planetThumbs {
+	// we must position the sun in the centre of the solar system
+	// expand section.sun parent to full size of screen and use flexbox
+	width: 100%;
+	height: 100vh;
+
+	//flexbox
+	@include flexboxColumn1;
+	justify-content: center;
+}
+
+section.planetThumbs section.sun {
+	// section.sun must be position relative so that we can position the planets relative to its location
+	// position: relative;
+	// don't need this since we want to set everything relative to section.solarSystem
+
+	img {
+		border-radius: 50%;
+	}
+
+	img.solarSun {
+		// testing
+		border: 5px ridge orange;
+	}
+}
+
+// set all planets to position absolute... relative to its parent section.sun
+section.planetThumbs section.sun .planet {
+	position: absolute;
+}
+
+// set the positions of the individual planets
+
+// MERCURY
+section.planetThumbs .mercury {
+	top: 30%;
+	left: 53%;
+
+	img {
+		border: 2px solid red;
+		width:30px;
+	}
+}
+
+// VENUS
+section.planetThumbs .venus {
+	top: 48%;
+	left: 71%;
+
+	img {
+		border: 2px solid purple;
+		width: 75px;
+	}
+}
+
+// EARTH
+section.planetThumbs .earth {
+	top: 22%;
+	left: 69%;
+
+	img {
+		border: 2px solid green;
+		width: 75px;
+	}
+}
+
+// MARS
+section.planetThumbs .mars {
+	top: 31%;
+	left: 79%;
+
+	img {
+		border: 2px solid crimson;
+		width: 80px;
+	}
+}
+
+// JUPITER
+section.planetThumbs .jupiter {
+	top: 21%;
+	left: 89%;
+
+	img {
+		border: 2px solid orange;
+		width: 150px;
+	}
+}
+
+
+// // END PLANET THUMBNAILS ------------------------------------------------
+
+
+
+// MODAL BOXES  ------------------------------------------------
+// the modal boxes holds all the modal box html data that we reveal depending on which planet thumbnail image is clicked
+
+// this holds all of the modal entries
+section.modalBoxes {
+	position: absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+
+	// set z-index so that it is above the planets (thumbnails) in the background
+	z-index: 10;
+
+	//flexbox to make all of the modal entries centred...
+	//this section will need a set height for vertical alignment??
+	@include flexboxColumn1;
+}
+
+// for design testing purposes make all other modalBox sections disappear while we stile the first one
+// once finished styling the first one we also make the first modalBox disappear
+section.modalBoxes section:first-child ~ section {
+	display: none;
+}
+
+// this styles the modal entries
+section.modalBoxes section.modal {
+	// this is the parent of .frame and .text
+	// we want to flexbox these beside each other
+	@include flexboxRow1;
+	justify-content: space-between;
+	align-content: space-between;
+	align-items: flex-start; // we want the tops to align
+
+	// set the section.modal "entry" to position relative so we can align the close button
+	position: relative;
+
+	.frame {
+		// if flex isn't supported
+		float: left;
+
+		//flex child
+		flex: 1 50%;
+		
+		//flexbox... to centre the image if needed?
+		@include flexboxColumn1;
+		
+		img {
+			float: left;
+			max-width: 100%;
+		}
+	}
+
+	.text {
+		// if flex isn't supported
+		float: right;
+
+		//flex child
+		flex: 1 50%;
+
+		padding: 2%;
+
+		color: white;
+	}
+
+	span.fa.fa-close {
+		color:white;
+
+		position: absolute;
+		top: 0;
+		right:0;
+
+		cursor:pointer;
+
+		border: 3px solid white;
+		padding: 0.5%;
+
+		@include transitionEffectAllEaseIn(0.5s);
+
+		&:hover {
+			color: orange;
+			border: 3px solid orange;
+		}
+	}
+}
+
+// // END MODAL BOXES ------------------------------------------------
+
+
+
+///////////////////////////////////////////////
+///// 		END INDEX.HTML
+///////////////////////////////////////////////

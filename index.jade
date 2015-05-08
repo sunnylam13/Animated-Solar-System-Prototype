@@ -8,22 +8,27 @@ block content
 	
 	// WARNING:  images that are bigger than 200kb will slow this site down like crazy
 
-	section.rings
-		section.planetThumbs
+	section.solarSystem
+		section.planetThumbs.clearfix
 			+planetThumbnail1('sun')
-			+planetThumbnail1('planet mercury')
-			+planetThumbnail1('planet venus')
-			+planetThumbnail1('planet earth')
-			+planetThumbnail1('planet mars')
-			+planetThumbnail1('planet jupiter')
+				section(class='sun').clearfix
+					.frame
+						.image
+							img(src="http://lorempixel.com/200/200", alt="Image Placeholder").solarSun
+					// indent the remaining planets to be children of section.sun so that you can position them relative to section.sun
+					+planetThumbnail1('planet mercury')
+					+planetThumbnail1('planet venus')
+					+planetThumbnail1('planet earth')
+					+planetThumbnail1('planet mars')
+					+planetThumbnail1('planet jupiter')
 
-		section.modalBoxes
+		section.modalBoxes.clearfix
 			+modalBox1('modal sun','Sun')
-			+modalBox1('modal mercury','heading')
-			+modalBox1('modal venus','heading')
-			+modalBox1('modal earth','heading')
-			+modalBox1('modal mars','heading')
-			+modalBox1('modal jupiter','heading')
+			+modalBox1('modal mercury','Mercury')
+			+modalBox1('modal venus','Venus')
+			+modalBox1('modal earth','Earth')
+			+modalBox1('modal mars','Mars')
+			+modalBox1('modal jupiter','Jupiter')
 
 	////////////////////////////////////////////
 	// 		END INDEX.HTML
