@@ -1,0 +1,44 @@
+//- ===================================
+//- 		MIXINS PROJECT
+//- ===================================
+
+//- These mixins are specific to this project only.
+//- move mixins here only if they are required in other sections of the site
+
+//- ===================================
+//- 		INDEX.HTML
+//- ===================================
+
+//- PLANET THUMBNAILS  ------------------------------------------------
+
+mixin planetThumbnail1(className)
+	if block
+		block
+	else
+		section(class=className)
+			.frame
+				.image
+					img(src="http://lorempixel.com/200/200", alt="Image Placeholder")
+
+//- END PLANET THUMBNAILS ------------------------------------------------
+
+
+//- MODAL BOXES  ------------------------------------------------
+mixin modalBox1(className,heading)
+	if block
+		block
+	else
+		section(class=className)
+			.frame
+				.image
+					img(src="http://lorempixel.com/200/200", alt="Image Placeholder")
+			.text
+				h2=heading
+				h3 Lorem ipsum dolor sit amet
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi modi, velit ratione odio ab suscipit.
+
+//- END MODAL BOXES ------------------------------------------------
+
+//- END INDEX.HTML
+
+//- END MIXINS PROJECT 

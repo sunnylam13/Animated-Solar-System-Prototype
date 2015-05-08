@@ -1,0 +1,30 @@
+extends index.layout.030215.1.jade
+
+block content
+
+	////////////////////////////////////////////
+	// 		INDEX.HTML
+	//////////////////////////////////////////
+	
+	// WARNING:  images that are bigger than 200kb will slow this site down like crazy
+
+	section.rings
+		section.planetThumbs
+			+planetThumbnail1('sun')
+			+planetThumbnail1('planet mercury')
+			+planetThumbnail1('planet venus')
+			+planetThumbnail1('planet earth')
+			+planetThumbnail1('planet mars')
+			+planetThumbnail1('planet jupiter')
+
+		section.modalBoxes
+			+modalBox1('modal sun','Sun')
+			+modalBox1('modal mercury','heading')
+			+modalBox1('modal venus','heading')
+			+modalBox1('modal earth','heading')
+			+modalBox1('modal mars','heading')
+			+modalBox1('modal jupiter','heading')
+
+	////////////////////////////////////////////
+	// 		END INDEX.HTML
+	////////////////////////////////////////////
