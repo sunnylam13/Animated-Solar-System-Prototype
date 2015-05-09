@@ -58,12 +58,21 @@ section.planetThumbs section.sun .planet {
 }
 
 // set the positions of the individual planets
+// use Chrome Element Inspector in Sidebar vertical mode instead of horizontal mode otherwise the vertical alignments with the Sun will be off
+
+// stagger value
+// default value is 2%
+$planet_vertical_stagger: 6%;
 
 // MERCURY
 section.planetThumbs .mercury {
 	// top: 30%;
 	// left: 53%;
+	// values with direct alignment with the Sun
 	top: 48%;
+	left: 49%;
+	// values with some vertical stagger
+	top: 48%+$planet_vertical_stagger;
 	left: 49%;
 
 	img {
@@ -76,8 +85,14 @@ section.planetThumbs .mercury {
 section.planetThumbs .venus {
 	// top: 48%;
 	// left: 71%;
-	top: 50%;
-	left: 48%;
+	// top: 50%;
+	// left: 48%;
+	// values with direct alignment with the Sun
+	top: 45%;
+	left: 47%;
+	// values with some vertical stagger
+	top: 45%+$planet_vertical_stagger;
+	left: 47%;
 
 	img {
 		border: 2px solid purple;
@@ -89,8 +104,14 @@ section.planetThumbs .venus {
 section.planetThumbs .earth {
 	// top: 22%;
 	// left: 69%;
-	top: 59%;
-	left: 48%;
+	// top: 59%;
+	// left: 48%;
+	// values with direct alignment with the Sun
+	top: 46%;
+	left: 47%;
+	// values with some vertical stagger
+	top: 46%+$planet_vertical_stagger;
+	left: 47%;
 
 	img {
 		border: 2px solid green;
@@ -102,8 +123,14 @@ section.planetThumbs .earth {
 section.planetThumbs .mars {
 	// top: 31%;
 	// left: 79%;
-	top: 65%;
-	left: 48%;
+	// top: 65%;
+	// left: 48%;
+	// values with direct alignment with the Sun
+	top: 47%;
+	left: 47%;
+	// values with some vertical stagger
+	top: 47%+$planet_vertical_stagger;
+	left: 47%;
 
 	img {
 		border: 2px solid crimson;
@@ -115,8 +142,14 @@ section.planetThumbs .mars {
 section.planetThumbs .jupiter {
 	// top: 21%;
 	// left: 89%;
-	top: 69%;
-	left: 46%;
+	// top: 69%;
+	// left: 46%;
+	// values with direct alignment with the Sun
+	top: 41%;
+	left: 44%;
+	// values with some vertical stagger
+	top: 41%+$planet_vertical_stagger+7%;
+	left: 44%;
 
 	img {
 		border: 2px solid orange;
