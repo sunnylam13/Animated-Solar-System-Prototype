@@ -74,6 +74,9 @@ section.planetThumbs .mercury {
 	// values with some vertical stagger
 	top: 48%+$planet_vertical_stagger;
 	left: 49%;
+	// values from original though aligned along the vertical axis
+	top: 30%;
+	left: 49%;
 
 	img {
 		border: 2px solid red;
@@ -92,6 +95,9 @@ section.planetThumbs .venus {
 	left: 47%;
 	// values with some vertical stagger
 	top: 45%+$planet_vertical_stagger;
+	left: 47%;
+	// values from original though aligned along the vertical axis
+	top: 48%;
 	left: 47%;
 
 	img {
@@ -112,6 +118,9 @@ section.planetThumbs .earth {
 	// values with some vertical stagger
 	top: 46%+$planet_vertical_stagger;
 	left: 47%;
+	// values from original though aligned along the vertical axis
+	top: 22%;
+	left: 47%;
 
 	img {
 		border: 2px solid green;
@@ -131,6 +140,9 @@ section.planetThumbs .mars {
 	// values with some vertical stagger
 	top: 47%+$planet_vertical_stagger;
 	left: 47%;
+	// values from original though aligned along the vertical axis
+	top: 31%;
+	left: 47%;
 
 	img {
 		border: 2px solid crimson;
@@ -149,6 +161,9 @@ section.planetThumbs .jupiter {
 	left: 44%;
 	// values with some vertical stagger
 	top: 41%+$planet_vertical_stagger+7%;
+	left: 44%;
+	// values from original though aligned along the vertical axis
+	top: 21%;
 	left: 44%;
 
 	img {
