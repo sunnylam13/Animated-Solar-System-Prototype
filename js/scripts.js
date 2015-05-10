@@ -114,7 +114,13 @@ function venusOrbit1 () {
 	var $planetTarget = $('section.planetThumbs section.venus');
 	console.log("This is the planet we're targeting %s",$planetTarget);
 
-	venusOrbit.to($planetTarget,venusOrbitSpeed,{rotationY:360, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
+	// venusOrbit.to($planetTarget,venusOrbitSpeed,{rotationY:360, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
+
+	// venusOrbit.to($planetTarget,venusOrbitSpeed*0.45,{rotationY:360, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
+	// venusOrbit.to($planetTarget,venusOrbitSpeed*0.10,{rotationY:360, transformOrigin:venus_transform_origin, zIndex:-5, ease: Linear.easeNone});
+	// venusOrbit.to($planetTarget,venusOrbitSpeed*0.45,{rotationY:360, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
+
+	venusOrbit.to($planetTarget,venusOrbitSpeed,{rotationY:360, transformOrigin:venus_transform_origin, zIndex:1, ease: Linear.easeNone});
 
 	venusOrbit.play();
 }
