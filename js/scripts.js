@@ -104,16 +104,6 @@ function mercuryOrbit1 () {
 	var $planetTarget = $('section.planetThumbs section.mercury');
 	console.log("This is the planet we're targeting %s",$planetTarget);
 
-	// mercuryOrbit.to($planetTarget,20,{rotationY:360, transformOrigin:"50% 50% -500", ease: Power0.easeIn});
-	// mercuryOrbit.to($planetTarget,20,{rotationY:360, rotationX:-45, transformOrigin:"-300% -300% -300", ease: Power0.easeIn});
-	// mercuryOrbit.to($planetTarget,3,{rotationY:360, transformOrigin:"300% -1000% -200", ease: Power0.easeIn});
-	// mercuryOrbit.to($planetTarget,10,{rotationY:360, transformOrigin:"bottom left -500", ease: Power0.easeIn});
-	// mercuryOrbit.to($planetTarget,10,{rotationY:360, transformPerspective: 400, transformOrigin:"50% 50% -1000", ease: Power0.easeIn});
-	// mercuryOrbit.to($planetTarget,3,{rotationY:360, transformOrigin:"300% -1000% -200", ease: Linear.easeNone});
-	// mercuryOrbit.set($solarRef,{zIndex:100, ease: Linear.easeNone},'-=1');
-	// console.log('The sun was targeted',$solarRef);
-	// mercuryOrbit.to($(planetTarget),3,{rotationY:360, perspective: 200, transformOrigin:"50% 50% -200", ease: Linear.easeNone});
-	// mercuryOrbit.to($planetTarget,mercuryOrbitSpeed,{rotationY:360, perspective: 200, transformOrigin:"50% 50% -200", ease: Linear.easeNone});
 	mercuryOrbit.to($planetTarget,mercuryOrbitSpeed,{rotationY:360, perspective: 200, transformOrigin:mercury_transform_origin, ease: Linear.easeNone});
 
 	mercuryOrbit.play();
@@ -124,11 +114,6 @@ function venusOrbit1 () {
 	var $planetTarget = $('section.planetThumbs section.venus');
 	console.log("This is the planet we're targeting %s",$planetTarget);
 
-	// mercuryOrbit.to($planetTarget,20,{rotationY:360, transformOrigin:"50% 50% -500", ease: Power0.easeIn});
-	// mercuryOrbit.to($planetTarget,20,{rotationY:360, rotationX:-45, transformOrigin:"-300% -300% -300", ease: Power0.easeIn});
-	// venusOrbit.to($planetTarget,10,{rotationY:360, transformOrigin:"50% 337px -1500", ease: Power0.easeIn});
-	// venusOrbit.to($planetTarget,10,{rotationY:360, transformOrigin:"50% 337px -500", ease: Linear.easeNone});
-	// venusOrbit.to($planetTarget,venusOrbitSpeed,{rotationY:360, transformOrigin:"50% 50% -400", ease: Linear.easeNone});
 	venusOrbit.to($planetTarget,venusOrbitSpeed,{rotationY:360, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
 
 	venusOrbit.play();
@@ -139,12 +124,6 @@ function earthOrbit1 () {
 	var $planetTarget = $('section.planetThumbs section.earth');
 	console.log("This is the planet we're targeting %s",$planetTarget);
 
-	// earthOrbit.to($planetTarget,9,{rotationY:360, transformOrigin:"50% 50% -500", ease: Power0.easeIn});
-	// earthOrbit.to($planetTarget,20,{rotationY:360, rotationX:-45, transformOrigin:"-300% -300% -300", ease: Power0.easeIn});
-	// venusOrbit.to($planetTarget,20,{rotationY:360, transformOrigin:"-300% -300% -500", ease: Power0.easeIn});
-	// earthOrbit.to($planetTarget,10,{rotationY:360, transformOrigin:"250px 337px -1500", ease: Power0.easeIn});
-	// earthOrbit.to($planetTarget,10,{rotationY:360, transformOrigin:"250px 337px -700", ease: Linear.easeNone});
-	// earthOrbit.to($planetTarget,earthOrbitSpeed,{rotationY:360, transformOrigin:"50% 50% -700", ease: Linear.easeNone});
 	earthOrbit.to($planetTarget,earthOrbitSpeed,{rotationY:360, transformOrigin:earth_transform_origin, ease: Linear.easeNone});
 
 	earthOrbit.play();
@@ -155,12 +134,6 @@ function marsOrbit1 () {
 	var $planetTarget = $('section.planetThumbs section.mars');
 	console.log("This is the planet we're targeting %s",$planetTarget);
 
-	// earthOrbit.to($planetTarget,9,{rotationY:360, transformOrigin:"50% 50% -500", ease: Power0.easeIn});
-	// earthOrbit.to($planetTarget,20,{rotationY:360, rotationX:-45, transformOrigin:"-300% -300% -300", ease: Power0.easeIn});
-	// venusOrbit.to($planetTarget,20,{rotationY:360, transformOrigin:"-300% -300% -500", ease: Power0.easeIn});
-	// earthOrbit.to($planetTarget,10,{rotationY:360, transformOrigin:"250px 337px -1500", ease: Power0.easeIn});
-	// earthOrbit.to($planetTarget,10,{rotationY:360, transformOrigin:"250px 337px -700", ease: Linear.easeNone});
-	// marsOrbit.to($planetTarget,marsOrbitSpeed,{rotationY:360, transformOrigin:"50% 50% -900", ease: Linear.easeNone});
 	marsOrbit.to($planetTarget,marsOrbitSpeed,{rotationY:360, transformOrigin:mars_transform_origin, ease: Linear.easeNone});
 
 	marsOrbit.play();
@@ -171,18 +144,13 @@ function jupiterOrbit1 () {
 	var $planetTarget = $('section.planetThumbs section.jupiter');
 	console.log("This is the planet we're targeting %s",$planetTarget);
 
-	// earthOrbit.to($planetTarget,9,{rotationY:360, transformOrigin:"50% 50% -500", ease: Power0.easeIn});
-	// earthOrbit.to($planetTarget,20,{rotationY:360, rotationX:-45, transformOrigin:"-300% -300% -300", ease: Power0.easeIn});
-	// venusOrbit.to($planetTarget,20,{rotationY:360, transformOrigin:"-300% -300% -500", ease: Power0.easeIn});
-	// earthOrbit.to($planetTarget,10,{rotationY:360, transformOrigin:"250px 337px -1500", ease: Power0.easeIn});
-	// earthOrbit.to($planetTarget,10,{rotationY:360, transformOrigin:"250px 337px -700", ease: Linear.easeNone});
-	// jupiterOrbit.to($planetTarget,jupiterOrbitSpeed,{rotationY:360, transformOrigin:"50% 50% -1100", ease: Linear.easeNone});
 	jupiterOrbit.to($planetTarget,jupiterOrbitSpeed,{rotationY:360, transformOrigin:jupiter_transform_origin, ease: Linear.easeNone});
 
 	jupiterOrbit.play();
 }
 
 // helper function
+// currently inactive
 function setOrbits1 (planetTargetItem,orbitArrayItem) {
 	// STATUS:  work in progress
 	//where planetTargetItem is a jQuery object
