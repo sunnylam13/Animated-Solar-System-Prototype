@@ -42,6 +42,12 @@ section.planetThumbs section.sun {
 	// position: relative;
 	// don't need this since we want to set everything relative to section.solarSystem
 
+	// to allow a planet to go behind the sun we needed to set a z-index on the Sun... however since the planets are children of section.sun and I want to set the planets relative to section.solarSystem not section.sun (the nearest position relative is the one that hooks the planets)... I decided to use section.sun .frame which holds the image as the thing to set a z-index and position relative on
+	.frame {
+		position: relative;
+		z-index: 5;
+	}
+
 	img {
 		border-radius: 50%;
 	}

@@ -116,9 +116,15 @@ function venusOrbit1 () {
 
 	// venusOrbit.to($planetTarget,venusOrbitSpeed,{rotationY:360, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
 
-	// venusOrbit.to($planetTarget,venusOrbitSpeed*0.45,{rotationY:360, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
-	// venusOrbit.to($planetTarget,venusOrbitSpeed*0.10,{rotationY:360, transformOrigin:venus_transform_origin, zIndex:-5, ease: Linear.easeNone});
-	// venusOrbit.to($planetTarget,venusOrbitSpeed*0.45,{rotationY:360, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
+	// ISSUE:  Sunday, May 10, 2015 10:12 AM
+	// the issue is continuing the animation from its previous position
+	// right now the animations always start from the origin again each time
+	// I almost feel that a bezier path would be easier
+	// trying to divide both the animation time and the rotation amount by the proportion of travel doesn't work for the above reason as it always restarts the animation
+	// maybe try a call back
+	// venusOrbit.to($planetTarget,venusOrbitSpeed*0.40,{rotationY:360*0.4, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
+	// venusOrbit.to($planetTarget,venusOrbitSpeed*0.20,{rotationY:360*0.2, transformOrigin:venus_transform_origin, zIndex:-5, ease: Linear.easeNone});
+	// venusOrbit.to($planetTarget,venusOrbitSpeed*0.40,{rotationY:360*0.4, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
 
 	venusOrbit.to($planetTarget,venusOrbitSpeed,{rotationY:360, transformOrigin:venus_transform_origin, zIndex:1, ease: Linear.easeNone});
 
