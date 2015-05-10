@@ -126,7 +126,12 @@ function venusOrbit1 () {
 	// venusOrbit.to($planetTarget,venusOrbitSpeed*0.20,{rotationY:360*0.2, transformOrigin:venus_transform_origin, zIndex:-5, ease: Linear.easeNone});
 	// venusOrbit.to($planetTarget,venusOrbitSpeed*0.40,{rotationY:360*0.4, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
 
-	venusOrbit.to($planetTarget,venusOrbitSpeed,{rotationY:360, transformOrigin:venus_transform_origin, zIndex:1, ease: Linear.easeNone});
+	// version where we change the zIndex for the entire duration of animation
+	// venusOrbit.to($planetTarget,venusOrbitSpeed,{rotationY:360, transformOrigin:venus_transform_origin, zIndex:1, ease: Linear.easeNone});
+
+	// where we target the z-rotation or rotationZ instead
+	// our desired result might only work if the view plane is skewed
+	venusOrbit.to($planetTarget,venusOrbitSpeed,{rotationZ:360, transformOrigin:venus_transform_origin, ease: Linear.easeNone});
 
 	venusOrbit.play();
 }
